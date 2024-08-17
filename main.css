@@ -1,0 +1,172 @@
+
+.yd-table {
+  position: relative;
+  width:100%;
+  z-index: 1;
+  margin: auto;
+  overflow: auto;
+  height: 300px;
+  border: 1px solid #ddd;
+  background: #fefefe;
+
+}
+.yd-table table {
+  width: 100%;
+  margin: auto;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 14px;
+  font-weight: 600;
+  background-color:#fff;
+  color: #000;
+  text-align: center;
+}
+.yd-table .table-wrap {
+  position: relative;
+}
+
+.yd-table thead th {
+  background: #eee;
+  color: #333;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  letter-spacing: 1px;
+  text-align: center;
+  font-weight: 600;
+  border-bottom: 1px solid #dee2e6;
+  vertical-align: middle;
+}
+
+.yd-table tbody tr:hover {
+  border: 1px solid #68d4e7;
+  background-color: #f0f8ff;
+}
+
+.dark-mode .yd-table tbody tr:hover {
+	border: 1px solid #68d4e7;
+  background-color: #f0f8ff;
+  color: black;
+}
+
+.yd-table table tbody tr.selected td {
+  background-color: #fcf8e3;
+}
+.yd-table table tbody tr.dbl-selected td {
+  background-color: #c0dcea;
+}
+
+/* safari and ios need the tfoot itself to be position:sticky also */
+.yd-table tfoot,
+.yd-table tfoot th,
+.yd-table tfoot td {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  background: #fdfca5;
+  color: #333;
+  border-top: 2px double #333;
+  border-bottom: 2px double #333 !important;
+  font-size: 18px;
+  z-index: 4;
+}
+
+.yd-table thead,
+.yd-table thead th,
+.yd-table thead td {
+  z-index:4;
+}
+
+.yd-table th:first-child {
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  width: 50px;
+}
+
+.yd-table .toolbar {
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  top: 0;
+  z-index: 5;
+}
+
+.yd-table .navigation {
+  background: linear-gradient(#eee, #ccc);
+}
+
+.yd-table .table-search-rows {
+  height: calc(1.5rem + 2px);
+  max-width: 300px;
+}
+
+.yd-table tbody th:first-child {
+  background: #ccc;
+  border-left: 1px solid #dee2e6;
+  font-weight: normal;
+  color: #333;  
+}
+
+
+.yd-table thead th:first-child,
+.yd-table tfoot th:first-child {
+  z-index: 5;
+}
+
+.yd-table .fixed-right {
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 2;
+}
+.yd-table thead th.fixed-right,
+.yd-table tfoot th.fixed-right,
+.yd-table tfoot td.fixed-right {
+  z-index: 6;
+}
+
+.yd-table th, .yd-table td { 
+	white-space: nowrap !important;
+	border-right: 1px solid #ddd !important;
+	border-bottom: 1px solid #ddd !important;
+	padding: 3px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	vertical-align: top;
+}
+.yd-table .table-striped tr td:first-of-type {
+    border-radius: 0;
+}
+.yd-table .table-striped tr td:last-of-type {
+    border-radius: 0;
+}
+
+.yd-table .btn-xs {
+  min-width: 27px;
+}
+
+.yd-table .table-sortable {
+	cursor: pointer;
+}
+
+.yd-table .table-sortable .th-sort-asc::after {
+	content: "\25b4";
+}
+
+.yd-table .table-sortable .th-sort-desc::after {
+	content: "\25be";
+}
+
+.yd-table .table-sortable .th-sort-asc::after,
+.yd-table .table-sortable .th-sort-desc::after {
+	margin-left: 2px;
+}
+
+.yd-table .table-sortable .th-sort-asc,
+.yd-table .table-sortable .th-sort-desc {
+	background-color: #e1e1e1;
+	color: blue;
+}
+
+.yd-table .tr-selected {background: #35a4dc;color:#fff;}
